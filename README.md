@@ -32,6 +32,11 @@ Figma：<https://www.figma.com/design/w5qyhsNw3pC9Hu3pKR7QBX/%E7%94%BB%E9%9D%A2%
 - スタンプ帳
 - ユーザー登録・ログイン
 
+##使用する技術スタック
+- フレームワーク：Ruby on Rails
+- データベース：PostgreSQL
+- デプロイ先：Render
+
 ### READMEに記載した機能
 - [x] ユーザー登録機能
 - [x] ログイン機能
