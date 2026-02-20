@@ -69,7 +69,7 @@
 
 ## 使用する技術スタック
 ### フレームワーク
-- Ruby on Rails 7.x（MVC構成）
+- Ruby on Rails
 ### データベース
 - PostgreSQL
 ### デプロイ先
