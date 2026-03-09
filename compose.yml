@@ -27,6 +27,7 @@ services:
       - node_modules:/myapp/node_modules
     environment:
       TZ: Asia/Tokyo
+      DATABASE_URL: postgresql://neondb_owner:npg_w4Lh0qSfHRJW@ep-twilight-pond-a1et1ko4-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
     ports:
       - "3000:3000"
     depends_on:
