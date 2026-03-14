@@ -7,6 +7,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
+
     <%= yield :head %>
 
     <link rel="manifest" href="/manifest.json">
@@ -15,7 +17,15 @@
     <link rel="apple-touch-icon" href="/icon.png">
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="min-h-screen flex flex-col bg-gray-50">
+    <%= render "shared/header" %>
+    
+    <main class="flex-1">
+      <%= yield %>
+    </main>
+
+    <%= render "shared/footer" %>
+
   </body>
+
 </html>
