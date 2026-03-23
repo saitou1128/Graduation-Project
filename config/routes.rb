@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
+  get "game/index"
   devise_for :users
   root "pages#index"
   get "pages/index"
+  get 'game', to: 'game#index'
+  post 'game/roll', to: 'game#roll'
+  post "game/move", to: "game#move"
+  post "game/mission_complete", to: "game#mission_complete"
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
