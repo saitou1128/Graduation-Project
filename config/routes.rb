@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get "stamps/index"
   get "game/index"
   devise_for :users
   root "pages#index"
@@ -7,6 +8,7 @@ Rails.application.routes.draw do
   post 'game/roll', to: 'game#roll'
   post "game/move", to: "game#move"
   post "game/mission_complete", to: "game#mission_complete"
+  resources :stamps, only: [:index]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
