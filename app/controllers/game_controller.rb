@@ -82,6 +82,7 @@ class GameController < ApplicationController
     if user_signed_in?
       @game_state = current_user.game_state
       @current_station = @game_state.current_station
+      @mission = @current_station.missions.first
 
       Stamp.create!(
         user: current_user,
