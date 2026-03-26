@@ -1,9 +1,9 @@
 class GameController < ApplicationController
+  require 'ostruct'
   def index
     @stations = Station.order(:order_index)
 
     if user_signed_in?
-      # ログインユーザーは DB の GameState を使う
       @game_state = current_user.game_state || current_user.create_game_state!(
         current_station: Station.order(:order_index).first,
         last_dice_result: nil,
@@ -11,25 +11,39 @@ class GameController < ApplicationController
       )
       @current_station = @game_state.current_station
     else
-      # 未ログインユーザーは session を使う
       session[:current_station_index] ||= 0
       @current_station = Station.order(:order_index)[session[:current_station_index]]
+      session[:mission_cleared] = true if session[:mission_cleared].nil?
+
+      @game_state = OpenStruct.new(
+        mission_cleared: session[:mission_cleared],
+        last_dice_result: session[:last_dice_result]
+      )
     end
 
     @mission = @current_station.missions.first
 
+    @stamp_stations = Stamp.where(user: current_user).pluck(:station_id)
+    @has_stamp = @stamp_stations.include?(@current_station.id)
+
+    # ★ 次の駅の計算
     if @game_state&.last_dice_result.present?
       steps = @game_state.last_dice_result
 
       stations = Station.order(:order_index)
       current_index = @current_station.order_index - 1
-      next_index = (current_index + steps) % stations.count
 
-      @next_station = stations[next_index]
+      steps.times do
+        loop do
+          current_index = (current_index + 1) % stations.count
+          next_station = stations[current_index]
+
+          break unless @stamp_stations.include?(next_station.id)
+        end
+      end
+
+      @next_station = stations[current_index]
     end
-
-    @has_stamp = Stamp.exists?(user: current_user, station: @current_station)
-    @stamp_stations = Stamp.where(user: current_user).pluck(:station_id)
   end
 
   def roll
@@ -38,11 +52,11 @@ class GameController < ApplicationController
     if user_signed_in?
       @game_state = current_user.game_state
       @game_state.update!(
-        last_dice_result: dice,
-        mission_cleared: false
+        last_dice_result: dice
       )
     else
       session[:last_dice_result] = dice
+      session[:mission_cleared] = false
     end
 
     redirect_to game_path
@@ -56,16 +70,27 @@ class GameController < ApplicationController
       if steps.present?
         stations = Station.order(:order_index)
         current_index = @game_state.current_station.order_index - 1
-        new_index = (current_index + steps) % stations.count
+
+        steps.times do
+          loop do
+            current_index = (current_index + 1) % stations.count
+            next_station = stations[current_index]
+
+            break unless Stamp.exists?(user: current_user, station: next_station)
+          end
+        end
+
+        final_station = stations[current_index]
 
         @game_state.update!(
-          current_station: stations[new_index],
+          current_station: final_station,
           turn_count: @game_state.turn_count + 1,
-          last_dice_result: nil
+          last_dice_result: nil,
+          mission_cleared: false
         )
       end
+
     else
-      # 未ログイン時
       steps = session[:last_dice_result]
       if steps.present?
         stations = Station.order(:order_index)
@@ -73,6 +98,9 @@ class GameController < ApplicationController
         new_index = (current_index + steps) % stations.count
         session[:current_station_index] = new_index
       end
+
+      session[:last_dice_result] = nil
+      session[:mission_cleared] = false
     end
 
     redirect_to game_path
