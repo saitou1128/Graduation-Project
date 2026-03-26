@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get "terms", to: "static#terms"
+  get "privacy", to: "static#privacy"
   get "stamps/index"
   get "game/index"
   devise_for :users
