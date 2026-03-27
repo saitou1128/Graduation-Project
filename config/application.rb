@@ -16,6 +16,6 @@ Bundler.require(*Rails.groups)
 module Myapp
   class Application < Rails::Application
     config.load_defaults 7.2
-    config.assets.paths << Rails.root.join("app/assets/builds")
+    config.paths["app/assets"] << Rails.root.join("app/assets/builds")
   end
 end
