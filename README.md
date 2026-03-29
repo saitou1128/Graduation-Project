@@ -64,7 +64,6 @@
   - アプリの雰囲気を気軽に体験してもらうため、サイコロを振って次の駅を決める“すごろく機能”は未ログインでも利用できるようにします。
     一方で、実際に訪れた駅のスタンプ獲得や履歴の保存といった継続利用に関わる機能は、ログイン後に利用可能とします。
 
-
 ### 本リリースで追加したい機能
 - ミッションの種類を増やす
 - ミッションのランダム生成
@@ -87,4 +86,5 @@
 ## 画面遷移図
 Figma：<https://www.figma.com/design/w5qyhsNw3pC9Hu3pKR7QBX/%E7%94%BB%E9%9D%A2%E9%81%B7%E7%A7%BB%E5%9B%B3?t=rMNSuFU1WFDcSkRS-1>
 
-## ER図[![Image from Gyazo](https://i.gyazo.com/7a9a175511c7c2bf492e6895822708dc.png)](https://gyazo.com/7a9a175511c7c2bf492e6895822708dc)
+## ER図
+[![Image from Gyazo](https://i.gyazo.com/c91d829ac04ea6f42cae0a5e7e1d6849.png)](https://gyazo.com/c91d829ac04ea6f42cae0a5e7e1d6849)
