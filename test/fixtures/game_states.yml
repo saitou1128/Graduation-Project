@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  current_station: one
+  last_dice_result: 1
+  turn_count: 1
+  mission_cleared: false
+
+two:
+  user: two
+  current_station: two
+  last_dice_result: 1
+  turn_count: 1
+  mission_cleared: false
