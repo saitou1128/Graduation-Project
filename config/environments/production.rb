@@ -87,4 +87,9 @@ Rails.application.configure do
   #
   # Skip DNS rebinding protection for the default health check endpoint.
   # config.host_authorization = { exclude: ->(request) { request.path == "/up" } }
+  
+  # Propshaft / Tailwind / jsbundling 用の本番アセット設定
+  config.assets.digest = true
+  config.assets.compile = false
+  config.assets.paths << Rails.root.join("app/assets/builds")
 end
