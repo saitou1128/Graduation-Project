@@ -17,14 +17,6 @@
             class: "w-full border rounded px-3 py-2 focus:ring focus:ring-blue-200" %>
     </div>
 
-    <!-- ログイン状態を保持する -->
-    <% if devise_mapping.rememberable? %>
-      <div class="flex items-center mb-4">
-        <%= f.check_box :remember_me, class: "mr-2" %>
-        <%= f.label :remember_me, "ログイン状態を保持する" %>
-      </div>
-    <% end %>
-
     <!-- ログインボタン -->
     <%= f.submit "ログイン",
           class: "w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition" %>
