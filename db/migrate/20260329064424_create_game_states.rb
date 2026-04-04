@@ -1,5 +1,7 @@
 class CreateGameStates < ActiveRecord::Migration[8.1]
   def change
+    return if table_exists?(:game_states)
+
     create_table :game_states do |t|
       t.references :user, null: false, foreign_key: true
       t.references :current_station, null: false, foreign_key: { to_table: :stations }
