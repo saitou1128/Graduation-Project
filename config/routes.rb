@@ -14,6 +14,9 @@ Rails.application.routes.draw do
   # Stamps
   resources :stamps, only: [:index]
 
+  # Stations
+  resources :stations, only: [:show]
+
   # Devise
   devise_for :users, skip: [:passwords]
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

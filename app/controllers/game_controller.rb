@@ -115,8 +115,10 @@ class GameController < ApplicationController
       Stamp.create!(
         user: current_user,
         station: @current_station,
-        mission: @mission
+        mission: @mission,
+        comment: params[:comment]   # ← 追加！
       )
+
       @game_state.update!(
         last_dice_result: nil,
         mission_cleared: true
@@ -125,4 +127,5 @@ class GameController < ApplicationController
 
     redirect_to game_path, notice: "ミッションをクリアしました！"
   end
+
 end

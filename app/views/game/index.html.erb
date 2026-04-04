@@ -15,22 +15,24 @@
         <% end %>
       </div>
 
-      <!-- 駅アイコン -->
-      <div class="w-14 h-14 min-h-14 max-h-14
-            flex items-center justify-center
-            rounded-full border flex-shrink-0
-            text-[10px] font-semibold text-center
-            leading-none whitespace-normal break-words
-            overflow-hidden
-            <%= if is_current
-                  'bg-yellow-300 border-yellow-500 ring-4 ring-yellow-400'
-                elsif is_next
-                  'bg-blue-300 border-blue-600 ring-2 ring-blue-400'
-                else
-                  'bg-green-100 border-green-400'
-                end %>">
-        <%= station.name %>
-      </div>
+      <%= link_to station_path(station), class: "block" do %>
+        <div class="w-14 h-14 min-h-14 max-h-14
+                    flex items-center justify-center
+                    rounded-full border flex-shrink-0
+                    text-[10px] font-semibold text-center
+                    leading-none whitespace-normal break-words
+                    overflow-hidden
+                    transition-transform duration-150 hover:scale-105
+                    <%= if is_current
+                          'bg-yellow-300 border-yellow-500 ring-4 ring-yellow-400'
+                        elsif is_next
+                          'bg-blue-300 border-blue-600 ring-2 ring-blue-400'
+                        else
+                          'bg-green-100 border-green-400'
+                        end %>">
+          <%= station.name %>
+        </div>
+      <% end %>
 
       <!-- ⭐ スタンプ取得済みマーク -->
       <% if has_stamp %>
@@ -112,17 +114,31 @@
       ミッション：<%= @mission&.content || "ミッションはありません" %>
     </p>
 
-    <!-- ミッションクリア -->
     <% if user_signed_in? %>
       <% can_mission_complete = @mission.present? && !@game_state.mission_cleared %>
-      <%= button_to "ミッションクリア！", game_mission_complete_path, method: :post,
-            class: "px-4 py-2 rounded w-48 mx-auto text-center transition transform
-                    #{ can_mission_complete ?
-                       'bg-purple-500 text-white hover:scale-105 active:scale-95' :
-                       'bg-gray-300 text-gray-500 cursor-not-allowed' }",
-            disabled: !can_mission_complete %>
+
+      <% if can_mission_complete %>
+        <!-- コメント入力フォーム -->
+        <%= form_with url: game_mission_complete_path, method: :post, local: true do |f| %>
+          <div class="mb-3">
+            <%= f.label :comment, "コメント（任意）", class: "block text-sm font-medium text-gray-700" %>
+            <%= f.text_area :comment, rows: 3,
+                  class: "w-full border rounded p-2 text-sm" %>
+          </div>
+
+          <%= f.submit "ミッションクリア！",
+                class: "px-4 py-2 rounded w-48 bg-purple-500 text-white hover:scale-105 active:scale-95 transition" %>
+        <% end %>
+      <% else %>
+        <!-- クリア済み or ミッションなし -->
+        <button
+          class="px-4 py-2 rounded w-48 text-center bg-gray-300 text-gray-500 cursor-not-allowed">
+          ミッションクリア済み
+        </button>
+      <% end %>
+
     <% else %>
-      <!-- 未ログイン時-->
+      <!-- 未ログイン時 -->
       <div class="text-left">
         <button
           class="px-4 py-2 rounded w-80 text-center bg-gray-300 text-gray-500 cursor-not-allowed">
