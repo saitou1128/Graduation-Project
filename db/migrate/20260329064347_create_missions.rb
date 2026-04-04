@@ -1,5 +1,7 @@
 class CreateMissions < ActiveRecord::Migration[8.1]
   def change
+    return if table_exists?(:missions)
+
     create_table :missions do |t|
       t.references :station, null: false, foreign_key: true
       t.text :content
