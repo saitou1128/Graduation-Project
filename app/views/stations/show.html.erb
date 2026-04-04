@@ -1,0 +1,34 @@
+<h1 class="text-3xl font-bold mb-4 mt-2 tracking-wide">
+  <%= @station.name %>
+</h1>
+
+<div class="flex gap-6">
+  <div class="w-1/2">
+    <h2 class="text-xl font-semibold mb-2">地図</h2>
+    <div class="w-full h-80 border rounded overflow-hidden shadow">
+      <iframe
+        src="<%= @station.map_url %>"
+        width="100%"
+        height="100%"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+
+  <div class="w-1/2">
+    <h2 class="text-xl font-semibold mb-2">みんなのクリア状況</h2>
+    <div class="space-y-4 max-h-80 overflow-y-auto pr-2">
+      <% @stamps.each_with_index do |stamp, i| %>
+      <div class="p-4 border rounded shadow-sm bg-white">
+      <strong class="text-green-700">ユーザー<%= i + 1 %></strong><br>
+      <span class="text-sm text-gray-600">ミッション:</span>
+      <span><%= stamp.mission.content %></span><br>
+      <span class="text-sm text-gray-600">コメント:</span>
+      <span><%= stamp.comment.presence || "（コメントなし）" %></span>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

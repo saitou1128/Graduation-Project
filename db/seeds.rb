@@ -1,38 +1,39 @@
 stations = [
-  { name: "東京", order_index: 1, mission: "東京駅で名物のお土産を探そう！" },
-  { name: "神田", order_index: 2, mission: "神田の古書店街でお気に入りの本を見つけよう！" },
-  { name: "秋葉原", order_index: 3, mission: "秋葉原でガチャガチャを1回回そう！" },
-  { name: "御徒町", order_index: 4, mission: "御徒町のアメ横で食べ歩きをしよう！" },
-  { name: "上野", order_index: 5, mission: "上野公園で写真を撮ろう！" },
-  { name: "鶯谷", order_index: 6, mission: "鶯谷の歴史スポットを調べてみよう！" },
-  { name: "日暮里", order_index: 7, mission: "日暮里繊維街で布を触ってみよう！" },
-  { name: "西日暮里", order_index: 8, mission: "西日暮里でラーメンを食べよう！" },
-  { name: "田端", order_index: 9, mission: "田端文士村記念館を調べてみよう！" },
-  { name: "駒込", order_index: 10, mission: "六義園の写真を見てみよう！" },
-  { name: "巣鴨", order_index: 11, mission: "巣鴨地蔵通り商店街で名物を探そう！" },
-  { name: "大塚", order_index: 12, mission: "大塚の路面電車を見つけよう！" },
-  { name: "池袋", order_index: 13, mission: "池袋サンシャイン周辺を調べてみよう！" },
-  { name: "目白", order_index: 14, mission: "目白庭園の写真を見てみよう！" },
-  { name: "高田馬場", order_index: 15, mission: "高田馬場の早稲田文化を調べてみよう！" },
-  { name: "新大久保", order_index: 16, mission: "新大久保で韓国グルメを調べよう！" },
-  { name: "新宿", order_index: 17, mission: "新宿の高層ビル群の写真を見てみよう！" },
-  { name: "代々木", order_index: 18, mission: "代々木公園のスポットを調べてみよう！" },
-  { name: "原宿", order_index: 19, mission: "原宿の最新スイーツを調べよう！" },
-  { name: "渋谷", order_index: 20, mission: "渋谷スクランブル交差点の写真を見てみよう！" },
-  { name: "恵比寿", order_index: 21, mission: "恵比寿ガーデンプレイスを調べてみよう！" },
-  { name: "目黒", order_index: 22, mission: "目黒川の桜の写真を見てみよう！" },
-  { name: "五反田", order_index: 23, mission: "五反田の名物グルメを調べよう！" },
-  { name: "大崎", order_index: 24, mission: "大崎の再開発エリアを調べてみよう！" },
-  { name: "品川", order_index: 25, mission: "品川駅の新幹線ホームを調べてみよう！" },
-  { name: "田町", order_index: 26, mission: "田町の慶應義塾大学周辺を調べてみよう！" },
-  { name: "浜松町", order_index: 27, mission: "浜松町の東京タワーを調べてみよう！" },
-  { name: "新橋", order_index: 28, mission: "新橋のSL広場の写真を見てみよう！" },
-  { name: "有楽町", order_index: 29, mission: "有楽町のガード下グルメを調べてみよう！" }
+  { name: "東京", order_index: 1, mission: "東京駅で名物のお土産を探そう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.831769147383!2d139.76448647545666!3d35.68114412997931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1775223512254!5m2!1sja!2sjp" },
+  { name: "神田", order_index: 2, mission: "神田の古書店街でお気に入りの本を見つけよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.3978549702742!2d139.76835687545704!3d35.69182592939246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c019a160dbd%3A0x5db48e4e41b360ec!2z56We55Sw6aeF!5e0!3m2!1sja!2sjp!4v1775223950585!5m2!1sja!2sjp" },
+  { name: "秋葉原", order_index: 3, mission: "秋葉原でガチャガチャを1回回そう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.1314390121906!2d139.76830809678955!3d35.698383000000014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ea7e2f93329%3A0x158f36257ff597b1!2z56eL6JGJ5Y6f6aeF!5e0!3m2!1sja!2sjp!4v1775224015305!5m2!1sja!2sjp" },
+  { name: "御徒町", order_index: 4, mission: "御徒町のアメ横で食べ歩きをしよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.7600139411084!2d139.77228147545776!3d35.707522828529775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ea02f5ee773%3A0xe2d917e607724344!2z5b6h5b6S55S66aeF!5e0!3m2!1sja!2sjp!4v1775224060913!5m2!1sja!2sjp" },
+  { name: "上野", order_index: 5, mission: "上野公園で写真を撮ろう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1619.771422388645!2d139.77474148870095!3d35.712865870972124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188e9e93d3060b%3A0x6c89b36d7b4f9244!2z5LiK6YeO6aeF!5e0!3m2!1sja!2sjp!4v1775224133845!5m2!1sja!2sjp" },
+  { name: "鶯谷", order_index: 6, mission: "鶯谷の歴史スポットを調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.193409188988!2d139.77543837545826!3d35.721461627763524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188e84760718bb%3A0xf0bf33d969ec483b!2z6bav6LC36aeF!5e0!3m2!1sja!2sjp!4v1775224235057!5m2!1sja!2sjp" },
+  { name: "日暮里", order_index: 7, mission: "日暮里繊維街で布を触ってみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.9209692236304!2d139.76806647545862!3d35.72816212739498!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188dd5ba0c2931%3A0xa06023b97dce83be!2z5pel5pqu6YeM6aeF!5e0!3m2!1sja!2sjp!4v1775224277245!5m2!1sja!2sjp" },
+  { name: "西日暮里", order_index: 8, mission: "西日暮里でラーメンを食べよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.7646709165265!2d139.76212199678957!3d35.73200569999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188dd0a0b260fb%3A0xa428ba1d9495d7f9!2z6KW_5pel5pqu6YeM6aeF!5e0!3m2!1sja!2sjp!4v1775224345005!5m2!1sja!2sjp" },
+  { name: "田端", order_index: 9, mission: "田端文士村記念館を調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.514278165767!2d139.7582404754591!3d35.738162426844944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188dc29230686b%3A0x88d3096cc309a9b3!2z55Sw56uv6aeF!5e0!3m2!1sja!2sjp!4v1775224402792!5m2!1sja!2sjp" },
+  { name: "駒込", order_index: 10, mission: "六義園の写真を見てみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.5790117744!2d139.74443487545895!3d35.736570826932606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d969bd7335f%3A0xc93afd70355008c3!2z6aeS6L686aeF!5e0!3m2!1sja!2sjp!4v1775224459287!5m2!1sja!2sjp" },
+  { name: "巣鴨", order_index: 11, mission: "巣鴨地蔵通り商店街で名物を探そう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.7070115087195!2d139.7367098754588!3d35.733423527105764!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d990bffa915%3A0xa4d68de94432de9a!2z5bej6bSo6aeF!5e0!3m2!1sja!2sjp!4v1775224528310!5m2!1sja!2sjp" },
+  { name: "大塚", order_index: 12, mission: "大塚の路面電車を見つけよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.7818656558807!2d139.72602767545882!3d35.73158287720694!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d76c481e4d9%3A0x869b253053bc901b!2z5aSn5aGa6aeF!5e0!3m2!1sja!2sjp!4v1775224574549!5m2!1sja!2sjp" },
+  { name: "池袋", order_index: 13, mission: "池袋サンシャイン周辺を調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.866276659899!2d139.70832517545873!3d35.72950712732104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d5d4043e0dd%3A0x213775d25d2b034d!2z5rGg6KKL6aeF!5e0!3m2!1sja!2sjp!4v1775224621166!5m2!1sja!2sjp" },
+  { name: "目白", order_index: 14, mission: "目白庭園の写真を見てみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.204166822394!2d139.70401917545834!3d35.72119702777807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d4152847781%3A0x24b8c0d08b95c2c2!2z55uu55m96aeF!5e0!3m2!1sja!2sjp!4v1775224740191!5m2!1sja!2sjp" },
+  { name: "高田馬場", order_index: 15, mission: "高田馬場の早稲田文化を調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.5548823023223!2d139.70128657545803!3d35.71256972825239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d399ddaa763%3A0x954afc3e292c9a7e!2z6auY55Sw6aas5aC06aeF!5e0!3m2!1sja!2sjp!4v1775224826508!5m2!1sja!2sjp" },
+  { name: "新大久保", order_index: 16, mission: "新大久保で韓国グルメを調べよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.0149292146853!2d139.6976508754573!3d35.701250228874585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188d2f37e44929%3A0x70e03a4ceb52d545!2z5paw5aSn5LmF5L-d6aeF!5e0!3m2!1sja!2sjp!4v1775224879924!5m2!1sja!2sjp" },
+  { name: "新宿", order_index: 17, mission: "新宿の高層ビル群の写真を見てみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.468597432625!2d139.69748567545687!3d35.69008462948815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cd0d6b1ba1f%3A0x1c32a1f1ecacfdd5!2z5paw5a6_6aeF!5e0!3m2!1sja!2sjp!4v1775224933812!5m2!1sja!2sjp" },
+  { name: "代々木", order_index: 18, mission: "代々木公園のスポットを調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.7548721266558!2d139.69948057545662!3d35.68303732987534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cc6088e6041%3A0x3dd39ee1809084f7!2z5Luj44CF5pyo6aeF!5e0!3m2!1sja!2sjp!4v1775224993467!5m2!1sja!2sjp" },
+  { name: "原宿", order_index: 19, mission: "原宿の最新スイーツを調べよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.2806854107057!2d139.69770259678958!3d35.670090099999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188cbac9b52cff%3A0x560d87a8e2d1d3d2!2z5Y6f5a6_6aeF!5e0!3m2!1sja!2sjp!4v1775225042033!5m2!1sja!2sjp" },
+  { name: "渋谷", order_index: 20, mission: "渋谷スクランブル交差点の写真を見てみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7626380133624!2d139.69847947545554!3d35.658219281238225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b563b00109f%3A0x337328def1e2ab26!2z5riL6LC36aeF!5e0!3m2!1sja!2sjp!4v1775225090653!5m2!1sja!2sjp" },
+  { name: "恵比寿", order_index: 21, mission: "恵比寿ガーデンプレイスを調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.229420991386!2d139.7075068754551!3d35.646718831869634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b4046e3f71d%3A0x85ab1d92ef294edf!2z5oG15q-U5a-_6aeF!5e0!3m2!1sja!2sjp!4v1775225129982!5m2!1sja!2sjp" },
+  { name: "目黒", order_index: 22, mission: "目黒川の桜の写真を見てみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d25937.82320852981!2d139.68948218563798!3d35.64675628452155!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b1eb6dc8f69%3A0x85624a5276fc423e!2z55uu6buS6aeF!5e0!3m2!1sja!2sjp!4v1775225188888!5m2!1sja!2sjp" },
+  { name: "五反田", order_index: 23, mission: "五反田の名物グルメを調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.0634070723!2d139.72102767545402!3d35.62616333299763!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188afb6cb8284b%3A0xef79b42efdaba522!2z5LqU5Y-N55Sw6aeF!5e0!3m2!1sja!2sjp!4v1775225234697!5m2!1sja!2sjp" },
+  { name: "大崎", order_index: 24, mission: "大崎の再開発エリアを調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3243.3192419425304!2d139.72561427545378!3d35.61985563334374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188af43b9fc7f5%3A0xc9cec030c12bcf76!2z5aSn5bSO6aeF!5e0!3m2!1sja!2sjp!4v1775225278263!5m2!1sja!2sjp" },
+  { name: "品川", order_index: 25, mission: "品川駅の新幹線ホームを調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.969612333641!2d139.7361847754543!3d35.62847563287074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188a5a6e148775%3A0x9a45c347f706db70!2z5ZOB5bed6aeF!5e0!3m2!1sja!2sjp!4v1775225326229!5m2!1sja!2sjp" },
+  { name: "田町", order_index: 26, mission: "田町の慶應義塾大学周辺を調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.269126492501!2d139.74498747545496!3d35.64574043192329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bb408dcbf5b%3A0x3d3b4cf5d047c154!2z55Sw55S66aeF!5e0!3m2!1sja!2sjp!4v1775225373162!5m2!1sja!2sjp" },
+  { name: "浜松町", order_index: 27, mission: "浜松町の東京タワーを調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.8775777533265!2d139.75383367545552!3d35.65538773139372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bc60592772b%3A0xe8f68e642f2dcbb1!2z5rWc5p2-55S66aeF!5e0!3m2!1sja!2sjp!4v1775225420494!5m2!1sja!2sjp" },
+  { name: "新橋", order_index: 28, mission: "新橋のSL広場の写真を見てみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.4311943572475!2d139.7557648754559!3d35.666383330790154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be9d1ae11e1%3A0x5851f1d35efc45b9!2z5paw5qmL6aeF!5e0!3m2!1sja!2sjp!4v1775225466571!5m2!1sja!2sjp" },
+  { name: "有楽町", order_index: 29, mission: "有楽町のガード下グルメを調べてみよう！", map_url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.064493891377!2d139.76026617545628!3d35.67541393029415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188be5454f4cd5%3A0xb887d7273136016a!2z5pyJ5qW955S66aeF!5e0!3m2!1sja!2sjp!4v1775225512467!5m2!1sja!2sjp" }
 ]
 
 stations.each do |data|
   station = Station.find_or_create_by!(name: data[:name], order_index: data[:order_index])
+  station.update!(map_url: data[:map_url])
   Mission.find_or_create_by!(station: station, content: data[:mission])
 end
 
-puts "山手線29駅 + ミッションの初期データを投入しました！"
+puts "山手線29駅 + ミッション + map_url を投入しました！"
